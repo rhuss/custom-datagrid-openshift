@@ -1,0 +1,18 @@
+metadata:
+  annotations:
+    image.openshift.io/triggers: |
+      [{
+        "from": {
+          "kind": "ImageStreamTag",
+          "name": "${project.artifactId}:${project.version}"
+        },
+        "fieldPath": "spec.template.spec.containers[?(@.name==\"create-cache-permanent\")].image"
+      }]
+spec:
+  template:
+    spec:
+      containers:
+      - name: create-cache-permanent
+        image: ' '
+      restartPolicy: Never
+

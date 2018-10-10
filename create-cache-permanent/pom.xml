@@ -16,7 +16,7 @@
 
       <version.infinispan>8.5.1.Final-redhat-1</version.infinispan> <!-- JDG 7.2.1 -->
 
-      <version.plugin.fabric8-maven>3.5.38</version.plugin.fabric8-maven>
+      <version.plugin.fabric8-maven>3.5.41</version.plugin.fabric8-maven>
       <version.plugin.shade-maven>3.1.0</version.plugin.shade-maven>
 
       <main.class.create-cache>app.CreateCache</main.class.create-cache>
@@ -60,7 +60,8 @@
                </execution>
             </executions>
             <configuration>
-               <generator>
+               <profile>raw</profile>
+                <generator>
                   <includes>
                      <include>java-exec</include>
                   </includes>
